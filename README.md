@@ -1,3 +1,14 @@
+# Personal Portfolio - Álvaro Carmona
+
+My personal portfolio developed with Astro, showcasing my professional experience, certifications and my personal projects.
+
+## 🎯 Sections 
+
+- **Home**: Personal and professional background
+- **Experience**: Professional journey
+- **Projects**: Featured projects with links and technologies used
+- **Certificaciones**: Technical certifications
+
 # Astro Starter Kit: Basics
 
 ```sh
