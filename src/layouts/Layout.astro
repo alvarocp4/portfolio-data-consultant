@@ -1,29 +1,28 @@
 ---
-const { title = "My Portfolio", description = "" } = Astro.props;
+import Welcome from '../components/Welcome.astro';
+const { title } = Astro.props;
 ---
-
-<html lang="es">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <Welcome title={title}/>
   </head>
-  <body style="font-family: sans-serif; margin:0; padding:0;">
-    <header style="background:#222; color:white; padding:1rem;">
-      <nav style="display:flex; gap:1rem;">
-        <a href="/" style="color:white; text-decoration:none;">Home</a>
-        <a href="/about" style="color:white; text-decoration:none;">About</a>
-        <a href="/projects" style="color:white; text-decoration:none;">Projects</a>
-      </nav>
-    </header>
-
-    <main style="padding:2rem;">
-      <slot />
-    </main>
-
-    <footer style="background:#f5f5f5; text-align:center; padding:1rem; margin-top:2rem;">
-      © {new Date().getFullYear()} - Mi Portfolio
-    </footer>
+  <body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Posts</a>
+      <a href="#">Contact</a>
+    </nav>
+    <h1>{title}</h1>
+    <article>
+      <slot /> <!-- your content is injected here -->
+    </article>
+    <Welcome />
   </body>
+  <style>
+    h1 {
+      font-size: 2rem;
+    }
+  </style>
 </html>
